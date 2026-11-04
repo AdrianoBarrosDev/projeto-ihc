@@ -1,0 +1,280 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Poppins';
+}
+
+.menu{
+    background-color: #19930E;
+    width: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 7px 0px 5px gray;
+    z-index: 1;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+}
+
+.aba{
+    color: white;
+    font-size: 16px;
+    padding: 18px 25px;
+    text-decoration: none;
+    font-style: bold;
+}
+
+.aba:hover{
+    background-color: #137A0A;
+    color: white;
+}
+
+.ativo{
+    background-color: #0E6206;
+}
+
+.conteudo{
+    width: 100%;
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo{
+    padding: 18px 25px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topo-title{
+    font-size: 28px;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.dado-user{
+    font-size: 20px;
+}
+
+.img-user{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    border: #19930E solid 2px;
+}
+
+img{
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.corpo{
+    background-color: white;
+    height: 100%;
+    padding: 25px;
+}
+
+.cards-politica{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 50px;
+}
+
+.card{
+    width: 350px;
+    height: 230px;
+    min-width: 150px;
+    border: #19930E solid 2px;
+    border-radius: 25px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    background-color: #19930E;
+    border-radius: 20px 20px 0px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.content{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: black;
+}
+
+.fila-atracacao{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.txt-fila{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.item-fila{
+    background-color: #E6E6E6;
+    height: 70px;
+    border-radius: 8px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nome-navio{
+    flex: 1;
+}
+
+.bolinha{
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.status{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bolinha.normal{
+    background-color: #5BA010;
+}
+
+.bolinha.atencao{
+    background-color: #D4C800;
+}
+
+.bolinha.risco{
+    background-color: #A80000;
+}
+
+.status.normal{
+    color: #19930E;
+}
+
+.status.atencao{
+    color: #C9B800;
+}
+
+.status.risco{
+    color: #A80000;
+}
+
+
+/* notebook / tablet */
+@media (max-width: 1400px) {
+    .cards-politica{
+        gap: 40px;
+        margin: 30px 0px;
+    }
+
+    .card{
+        width: 280px;
+    }
+}
+
+/* celular */
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+
+    .menu{
+        width: 100%;
+        min-height: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .aba{
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .topo{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .topo-title{
+        font-size: 22px;
+    }
+
+    .user{
+        gap: 10px;
+    }
+
+    .dado-user{
+        font-size: 14px;
+    }
+
+    .corpo{
+        padding: 15px;
+    }
+
+    .cards-politica{
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0px;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 350px;
+        height: 180px;
+    }
+
+    .content{
+        font-size: 40px;
+    }
+
+    .item-fila{
+        height: auto;
+        min-height: 70px;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .nome-navio{
+        font-size: 14px;
+    }
+
+    .status{
+        font-size: 14px;
+    }
+}
