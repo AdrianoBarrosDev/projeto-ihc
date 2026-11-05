@@ -14,7 +14,7 @@ body::before {
     position: fixed;
     inset: -10px;
 
-    background-image: url("/Images/porto_santos.jpg");
+    background-image: url(/projeto-ihc-main/Images/porto_santos.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

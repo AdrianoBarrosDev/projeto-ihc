@@ -189,7 +189,7 @@ img{
 
 
 /* notebook / tablet */
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     .cards-politica{
         gap: 40px;
         margin: 30px 0px;
