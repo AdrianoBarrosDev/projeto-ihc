@@ -1,0 +1,522 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Poppins';
+}
+
+.menu{
+    background-color: #19930E;
+    width: 250px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 7px 0px 5px gray;
+    z-index: 1;
+    position: fixed;
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+}
+
+.aba{
+    color: white;
+    font-size: 20px;
+    padding: 18px 25px;
+    text-decoration: none;
+    font-style: bold;
+}
+
+.aba:hover{
+    background-color: #137A0A;
+    color: white;
+}
+
+.ativo{
+    background-color: #0E6206;
+}
+
+.conteudo{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo{
+    padding: 18px 25px;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.topo-title{
+    font-size: 28px;
+}
+
+.subtitulo{
+    font-size: 14px;
+}
+
+.user{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.dado-user{
+    font-size: 20px;
+}
+
+.img-user{
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 100%;
+    border: #19930E solid 2px;
+    cursor: pointer;
+}
+
+img{
+    width: fit-content;
+    height: 100%;
+}
+
+/* menuzinho que aparece quando clica na foto do usuário */
+.menu-perfil{
+    display: none;
+    position: absolute;
+    top: 68px;
+    right: 0px;
+    width: 170px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px gray;
+    z-index: 2;
+}
+
+.menu-perfil.aberto{
+    display: block;
+}
+
+/* a setinha que fica apontando pra foto */
+.menu-perfil::before{
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 18px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.link-configuracao{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.link-configuracao:hover{
+    background-color: #EDEDED;
+}
+
+.link-sair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    background-color: #FF5050;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.link-sair:hover{
+    background-color: #E64545;
+}
+
+.link-sair svg{
+    width: 22px;
+    height: 22px;
+    fill: black;
+}
+
+.corpo{
+    background-color: white;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.configuracoes{
+    width: 80%;
+}
+
+.titulo-grupo{
+    font-family: 'Poppins';
+    font-size: 25px;
+    margin: 25px 0px 10px;
+}
+
+.caixa-grupo {
+    border: 2px solid #19930E;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.texto-linha{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.linha-config{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 10px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.linha-config:last-child{
+    border-bottom: none;
+}
+
+.nome-config{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* as barrinhas de limite */
+.area-slider{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.area-slider input{
+    width: 200px;
+    accent-color: #19930E;
+}
+
+.numero-limite{
+    width: 70px;
+    font-size: 18px;
+}
+
+/* o select verde (tirei a setinha padrão do navegador e botei a minha) */
+.seletor-verde{
+    width: 300px;
+    padding: 10px 45px 10px 15px;
+    font-family: 'Poppins';
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid #19930E;
+    border-radius: 8px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2319930E' stroke-width='1.5'%3E%3Cpolyline points='2,8 12,18 22,8'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 26px;
+}
+
+/* botão de ligar/desligar: o trilho + a bolinha branca que anda */
+.chave{
+    position: relative;
+    width: 52px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.chave input{
+    display: none;
+}
+
+.trilho{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #BDBDBD;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trilho::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.chave input:checked + .trilho{
+    background-color: #19930E;
+}
+
+.chave input:checked + .trilho::before{
+    transform: translateX(24px);
+}
+
+/* os três A do tamanho do texto */
+.tamanhos-texto{
+    display: flex;
+    gap: 10px;
+}
+
+.botao-tamanho{
+    width: 36px;
+    height: 36px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    border: 2px solid #19930E;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.texto-pequeno{
+    font-size: 12px;
+}
+
+.texto-medio{
+    font-size: 16px;
+}
+
+.texto-grande{
+    font-size: 20px;
+}
+
+.botao-tamanho.selecionado{
+    background-color: #19930E;
+    color: white;
+}
+
+/* botões lá de baixo da tela */
+.botoes-final{
+    display: flex;
+    gap: 15px;
+    margin: 25px 0px;
+}
+
+.botao-salvar{
+    padding: 8px 20px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #19930E;
+    color: white;
+    border: 2px solid #19930E;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.botao-salvar:hover{
+    background-color: #137A0A;
+}
+
+.botao-restaurar{
+    padding: 8px 20px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border: 2px solid #19930E;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.botao-restaurar:hover{
+    background-color: #E6F4E4;
+}
+
+/* a janelinha de "tem certeza?" com o fundo escuro por trás */
+.fundo-escuro{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.fundo-escuro.aberto{
+    display: flex;
+}
+
+.caixa-aviso{
+    width: 420px;
+    max-width: 90%;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+}
+
+.pergunta-aviso{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.botoes-aviso{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-sim{
+    width: 140px;
+    padding: 12px;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #19930E;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.botao-nao{
+    width: 140px;
+    padding: 12px;
+    font-family: 'Poppins';
+    font-size: 22px;
+    font-weight: 600;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 1600px) {
+    .cards-politica{
+        gap: 40px;
+        margin: 30px 0px;
+    }
+
+    .card{
+        width: 280px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+
+    .menu{
+        position: static;
+        width: 100%;
+        min-height: 0px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .conteudo{
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .logo{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .aba{
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .topo{
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .topo-title{
+        font-size: 22px;
+    }
+
+    .user{
+        gap: 10px;
+    }
+
+    .dado-user{
+        font-size: 14px;
+    }
+
+    .corpo{
+        padding: 15px;
+    }
+
+    .configuracoes{
+        width: 100%;
+    }
+
+    .linha-config{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .area-slider{
+        width: 100%;
+    }
+
+    .area-slider input{
+        flex: 1;
+    }
+
+    .seletor-verde{
+        width: 100%;
+    }
+
+    .botoes-final{
+        flex-direction: column;
+    }
+
+    .caixa-aviso{
+        padding: 25px 20px;
+    }
+
+    .botao-sim, .botao-nao{
+        width: 110px;
+    }
+}

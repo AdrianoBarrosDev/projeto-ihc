@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     box-shadow: 7px 0px 5px gray;
     z-index: 1;
+    position: fixed;
 }
 
 .logo{
@@ -23,7 +24,7 @@ body {
 
 .aba{
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     padding: 18px 25px;
     text-decoration: none;
     font-style: bold;
@@ -39,7 +40,8 @@ body {
 }
 
 .conteudo{
-    width: 100%;
+    margin-left: 250px;
+    width: calc(100% - 250px);
     min-width: 0px;
     display: flex;
     flex-direction: column;
@@ -51,6 +53,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .topo-title{
@@ -58,6 +62,7 @@ body {
 }
 
 .user{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,12 +79,78 @@ body {
     flex-shrink: 0;
     border-radius: 100%;
     border: #19930E solid 2px;
+    cursor: pointer;
 }
 
 img{
     border-radius: 100%;
     width: 100%;
     height: 100%;
+}
+
+/* menuzinho que aparece quando clica na foto do usuário */
+.menu-perfil{
+    display: none;
+    position: absolute;
+    top: 68px;
+    right: 0px;
+    width: 170px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px gray;
+    z-index: 2;
+}
+
+.menu-perfil.aberto{
+    display: block;
+}
+
+/* a setinha que fica apontando pra foto */
+.menu-perfil::before{
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 18px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+.link-configuracao{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.link-configuracao:hover{
+    background-color: #EDEDED;
+}
+
+.link-sair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    background-color: #FF5050;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.link-sair:hover{
+    background-color: #E64545;
+}
+
+.link-sair svg{
+    width: 22px;
+    height: 22px;
+    fill: black;
 }
 
 .corpo{
@@ -200,18 +271,24 @@ img{
     }
 }
 
-/* celular */
+
 @media (max-width: 767px) {
     body {
         flex-direction: column;
     }
 
     .menu{
+        position: static;
         width: 100%;
         min-height: 0px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .conteudo{
+        margin-left: 0px;
+        width: 100%;
     }
 
     .logo{
