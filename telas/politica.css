@@ -66,7 +66,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px
+    gap: 20px;
 }
 
 .dado-user{
@@ -88,7 +88,7 @@ img{
     height: 100%;
 }
 
-/* menuzinho que aparece quando clica na foto do usuário */
+/* Menu que aparece ao clicar na foto do usuário */
 .menu-perfil{
     display: none;
     position: absolute;
@@ -105,7 +105,7 @@ img{
     display: block;
 }
 
-/* a setinha que fica apontando pra foto */
+/* Setinha do menu de perfil */
 .menu-perfil::before{
     content: '';
     position: absolute;
@@ -205,6 +205,7 @@ img{
 }
 
 .content{
+    margin: 10px;
     height: 75%;
     display: flex;
     justify-content: center;
@@ -275,8 +276,29 @@ img{
     color: #A80000;
 }
 
+.botao{
+    display: flex;
+    justify-content: flex-end;
+}
 
-/* notebook / tablet */
+.botao-confirmar{
+    margin: 40px;
+    padding: 18px 70px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #19930E;
+    color: white;
+    border: 2px solid #19930E;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.botao-confirmar:hover{
+    background-color: #137A0A;
+}
+
+
 @media (max-width: 1600px) {
     .cards-politica{
         gap: 40px;
@@ -286,9 +308,14 @@ img{
     .card{
         width: 280px;
     }
+
+    .botao{
+    display: flex;
+    justify-content: center;
 }
 
-/* celular */
+}
+
 @media (max-width: 767px) {
     body {
         flex-direction: column;
@@ -315,7 +342,7 @@ img{
 
     .aba{
         padding: 12px 15px;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .topo{
@@ -365,10 +392,23 @@ img{
     }
 
     .nome-navio{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .status{
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+
+    .content{
+        font-size: 16px;
+    }
+
+    .botao-confirmar{
+        margin: 20px 0px;
+        padding: 14px 40px;
     }
 }

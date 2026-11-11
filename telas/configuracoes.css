@@ -221,7 +221,6 @@ img{
     font-size: 18px;
 }
 
-/* o select verde (tirei a setinha padrão do navegador e botei a minha) */
 .seletor-verde{
     width: 300px;
     padding: 10px 45px 10px 15px;
@@ -238,7 +237,6 @@ img{
     background-size: 26px;
 }
 
-/* botão de ligar/desligar: o trilho + a bolinha branca que anda */
 .chave{
     position: relative;
     width: 52px;
@@ -282,7 +280,6 @@ img{
     transform: translateX(24px);
 }
 
-/* os três A do tamanho do texto */
 .tamanhos-texto{
     display: flex;
     gap: 10px;
@@ -317,7 +314,6 @@ img{
     color: white;
 }
 
-/* botões lá de baixo da tela */
 .botoes-final{
     display: flex;
     gap: 15px;
@@ -325,7 +321,7 @@ img{
 }
 
 .botao-salvar{
-    padding: 8px 20px;
+    padding: 18px 20px;
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 14px;
@@ -356,7 +352,6 @@ img{
     background-color: #E6F4E4;
 }
 
-/* a janelinha de "tem certeza?" com o fundo escuro por trás */
 .fundo-escuro{
     display: none;
     position: fixed;
@@ -421,8 +416,6 @@ img{
     cursor: pointer;
 }
 
-
-
 @media (max-width: 1600px) {
     .cards-politica{
         gap: 40px;
@@ -433,7 +426,6 @@ img{
         width: 280px;
     }
 }
-
 
 @media (max-width: 767px) {
     body {
@@ -461,9 +453,8 @@ img{
 
     .aba{
         padding: 12px 15px;
-        font-size: 14px;
+        font-size: 17px;
     }
-
     .topo{
         flex-direction: column;
         gap: 10px;

@@ -217,13 +217,12 @@ img{
 
 .img-grafico img {
     width: 20%;
+    min-width: 250px;
     max-width: 500px;
     height: auto;
     object-fit: contain;
 }
 
-
-/* notebook / tablet */
 @media (max-width: 1600px) {
     .cards-politica{
         gap: 40px;
@@ -235,7 +234,7 @@ img{
     }
 }
 
-/* celular */
+
 @media (max-width: 767px) {
     body {
         flex-direction: column;
@@ -262,7 +261,7 @@ img{
 
     .aba{
         padding: 12px 15px;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .topo{

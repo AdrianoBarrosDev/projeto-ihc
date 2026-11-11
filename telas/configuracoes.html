@@ -41,7 +41,6 @@
         </div>
         <div class="corpo"> 
             <form class="configuracoes" id="formulario">
-
                 <div class="titulo-grupo">Limiares de alerta</div>
                 <div class="caixa-grupo limiares">
                     <div class="linha-config">
@@ -198,7 +197,6 @@
         var botoesTamanho = document.querySelectorAll('.botao-tamanho');
         var fundoEscuro = document.getElementById('fundoEscuro');
 
-        // escreve o número ao lado da barra toda vez que ela mexe
         function mostrarNumero(barra){
             var numero = barra.nextElementSibling;
             numero.textContent = barra.value.replace('.', ',') + ' ' + barra.dataset.unidade;
@@ -210,7 +208,6 @@
             }
         });
 
-        // só um dos "A" pode ficar marcado: desmarca todos e marca o que clicou
         botoesTamanho.forEach(function(botao){
             botao.onclick = function(){
                 botoesTamanho.forEach(function(b){
@@ -220,7 +217,6 @@
             }
         });
 
-        // por enquanto só avisa, depois eu ligo isso no back-end
         function salvarConfig(){
             alert('Alterações salvas!');
         }
@@ -232,17 +228,13 @@
         function fecharAviso(){
             fundoEscuro.classList.remove('aberto');
         }
-
-        // clicou em "sim": o reset joga tudo de volta pro valor que tá escrito no HTML
         function restaurarTudo(){
             formulario.reset();
 
-            // o reset não mexe nos números do lado das barras, então atualiza na mão
             barras.forEach(function(barra){
                 mostrarNumero(barra);
             });
 
-            // e o tamanho do texto volta pro médio
             botoesTamanho.forEach(function(b){
                 b.classList.remove('selecionado');
             });

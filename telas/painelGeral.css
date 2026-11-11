@@ -258,8 +258,6 @@ img{
     color: #A80000;
 }
 
-
-/* notebook / tablet */
 @media (max-width: 1600px) {
     .cards-politica{
         gap: 40px;
@@ -298,7 +296,7 @@ img{
 
     .aba{
         padding: 12px 15px;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .topo{

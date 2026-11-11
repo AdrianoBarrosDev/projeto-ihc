@@ -29,6 +29,8 @@ body::before {
     max-width: 900px;
     border-radius: 30px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-msg {
@@ -113,14 +115,47 @@ body::before {
     background-color: #126D0A;
 }
 
+.senha-box {
+    position: relative;
+}
+
+.senha-box .input-login {
+    padding-right: 45px;
+}
+
+.btn-olho {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+    color: #19930E;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-olho:hover {
+    color: #126D0A;
+}
+
 @media (min-width: 768px) {
-    .login-msg,
-    .login-inputs {
-        min-height: 550px;
+
+    .login {
+        flex-direction: row;
     }
 
     .login-msg {
+        width: 33.33%;
+        min-height: 550px;
         padding: 20px;
+    }
+
+    .login-inputs {
+        width: 66.66%;
+        min-height: 550px;
     }
 
     .txt-entrar {
